@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <title>Contact Us</title>
+    </head>
+    <hr />
+
+    <body>
+        <h1>Backyard Donuts</h1>
+        <hr />
+        <a href="index.html">Home</a>&nbsp;&nbsp;
+        <a href="menu.html">Menu</a>&nbsp;&nbsp;
+        <a href="contact.html">Contact</a>
+        <hr />
+        <form action="submit.html" method="post">
+          <label for="userName">Name:</label><br />
+          <input type="text" id="userName" name="userName"><br />
+          <label for="userEmail">Email:</label><br />
+          <input type="text" id="userEmail" name="userEmail"><br />
+          <label for="phone">Phone:</label><br />
+          <input type="text" id="phone" name="phone"><br />
+
+        <label for="service">Reason for Inquiry:</label><br />
+        <select id="service" name="service">
+          <option value="default" selceted>Catering</option>
+          <option value="party">Private Party</option>
+          <option value="feedback">Feedback</option>
+          <option value="other">Other</option>
+        </select><br />
+
+        <label for="info">Additional Information</label><br />
+          <textarea id="info" name="info"></textarea><br />
+
+
+        Have you been to the restaurant?
+          <input type="radio" id="choice1" name="questionnaire" value="yes">
+          <label for="choice1">Yes</label>
+          <input type="radio" id="choice2" name="questionnaire" value="no">
+          <label for="choice2">No</label><br />
+
+
+
+        Best day(s) to contact you:
+        <input type="checkbox" id="monday" name="day" value="monday">
+        <label for="monday">M</label>
+        <input type="checkbox" id="tuesday" name="day" value="tuesday">
+        <label for="tuesday">T</label>
+        <input type="checkbox" id="wednesday" name="day" value="wednesday">
+        <label for="wednesday">W</label>
+        <input type="checkbox" id="thursday" name="day" value="thursday">
+        <label for="thursday">Th</label>
+        <input type="checkbox" id="friday" name="day" value="friday">
+        <label for="friday">F</label><br />
+
+        <input type="submit" name="submit" value="Send Request">
+      </form>
+
+      <footer>
+        <hr />
+        <p>300 Donut Grove St, Dallas, TX, 75557</p>
+        <p>555-123-5678</p>
+      </footer>
+    </body>
+</html>
