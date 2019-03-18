@@ -2,29 +2,58 @@
 
 <html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Home Page</title>
+        <link rel="stylesheet" href=
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
+        <style>
+          article {
+            text-align: center;
+          }
+          .jumbotron {
+            background-color: #5b7d87;
+          }
+        </style>
     </head>
-
     <body>
+      <div class="container">
+        <header class="jumbotron">
         <h1>Backyard Donuts</h1>
+        <h2 class="font-italic">Dallas, TX</h2>
+        <div class="clear-float"></div>
+        </header>
 
         <nav>
-          <hr />
-          <a href="index.html">Home</a>&nbsp;&nbsp;
-          <a href="menu.html">Menu</a>&nbsp;&nbsp;
-          <a href="contact.html">Contact</a>
-          <hr />
+          <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="btn badge-pill active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn badge-pill active" href="menu.html">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn badge-pill active" href="contact.html">Contact</a>
+          </li>
+          </ul>
+          <div class="clear-float"></div>
         </nav>
-
         <section>
-          <img src="images/donuts.jpg" alt="Portrait of Dounts"/>
+          <article>
+          <img src="images/donuts.jpg" alt="Portrait of Dounts" style="width: 450px" style="length: 150px" />
           <p>Restaurant Description<br />Pudding liquorice caramels tootsie roll danish.<br /> Tootsie roll pie I love I love soufflé dessert biscuit halvah.<br /> I love liquorice I love donut bear claw gingerbread pie.<br /> Dragée chocolate bar pie gummies I love I love.<br /> Chupa chups sesame snaps pastry gummi bears macaroon.<br /> Sweet jujubes cheesecake pudding toffee marzipan sweet roll lollipop tart.<br /> Croissant gummi bears fruitcake icing danish candy canes sweet.<br /> Jelly-o cookie chocolate. Croissant I love biscuit liquorice donut.<br /> Jelly topping gingerbread toffee biscuit cheesecake pie candy canes.<br /> Danish sesame snaps croissant jelly-o ice cream cookie.<br /> Jelly chocolate cake sweet liquorice chocolate bonbon marzipan halvah pie.<br /> Sesame snaps wafer topping tootsie roll.</p>
+          <div class="clear-float"></div>
+          </aricle>
         </section>
 
         <footer>
-          <hr />
-          <p>300 Donut Grove St, Dallas, TX, 75557.</p>
+          <p>300 Preston Ave, Dallas, TX, 75557.</p>
           <p>555-123-5678</p>
         </footer>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     </body>
 </html>
