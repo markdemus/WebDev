@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Mark Demus
+Last revision: 3/19/2019-->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lucky 7's</title>
+  <link rel="stylesheet" href="styles/luckysevens.css">
+  <link href="https://fonts.googleapis.com/css?family=Ewert" rel="stylesheet">
+</head>
+<body>
+
+  <div class="container">
+    <h1>Lucky 7's</h1>
+    <label for="bet">Starting Cash:
+      <input type="text" id="bet" placeholder="$10 to $50" onfocus="showHint()" onblur="hideHint()">
+    </label>
+    <span id="hint">Press Enter or Click Play</span>
+    <p><button id="play" onclick="playGame()">Play</button></p>
+  </div>
+
+  <div id="output" class="container hidden hasLabel">
+    <div class="label">Game Log</div>
+  </div>
+
+  <div id="rules" class="container hasLabel">
+    <div class="label">Rules</div>
+
+  <p><img src="images/dice2.png" alt="Dice" height="25px" width="25px"> You roll two die, and for each roll you bet $1</p>
+  <p>If the pair adds up to <ins>7</ins>, <span class="win">you win $4</span> (and keep your bet)</p>
+  <p>Anything else and <span class="lose">you lose your $1 bet</span></p>
+  <p>Set your starting cash amount and see how many rolls it takes you to win large!</p>
+  </div>
+
+  <div id="results" class="container hidden hasLabel">
+    <div class="label">Results</div>
+    <table>
+      <tr>
+        <th>Starting Bet</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Highest Cash Total</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Roll Count at Highest Cash Total</th>
+        <td></td>
+      </tr>
+      <tr>
+        <th>Total Rolls Before Losing It All</th>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+
+  <p id="rulesBtn" class="hidden"><button onclick="showRules()">Show Rules</button></p>
+  <p id="resultsBtn" class="hidden"><button onclick="showResults()">Show Results</button></p>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="scripts/luckysevens.js"></script>
+</body>
+</html>

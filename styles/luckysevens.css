@@ -1,0 +1,189 @@
+body {
+  background-color: #c0c0c0;
+  color: #FFFFFF;
+  font-family: "Times New Roman", serif;
+  font-size: 17px;
+  padding-top: 10px;
+  text-align: center;
+}
+
+h1 {
+  color: #DC143C;
+  font-family: 'Ewert', cursive;
+  font-size: 4rem;
+  margin: 5px 0 0;
+  padding: 10px 0;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 13vw;
+  }
+}
+
+input {
+  background-color: #F8F8FF;
+  border: 2px solid #FF0000;
+  color: #B54F26;
+  font-family: inherit;
+  font-size: inherit;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  max-width: 80px;
+  text-align: center;
+}
+
+/*Placeholder text*/
+::-webkit-input-placeholder { /* Chrome */
+  color: #13771E;
+  transition: opacity 250ms ease-in-out;
+}
+:focus::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #13771E;
+  transition: opacity 250ms ease-in-out;
+}
+:focus:-ms-input-placeholder {
+  opacity: 0.5;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #13771E;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+:focus::-moz-placeholder {
+  opacity: 0.5;
+}
+:-moz-placeholder { /* Firefox 4 - 18 */
+  color: #13771E;
+  opacity: 1;
+  transition: opacity 250ms ease-in-out;
+}
+:focus:-moz-placeholder {
+  opacity: 0.5;
+} /*Placeholder text*/
+
+#hint {
+  position: absolute;
+  bottom: 81px;
+  left: 0;
+  color: #FFFFFF;
+  font-size: 0.9rem;
+  font-style: italic;
+  visibility: hidden;
+  width: 100%;
+}
+
+.container:first-of-type {
+  position: relative;
+}
+
+.container {
+  background-color: #000080;
+  border: 2px dashed #FF0000;
+  border-radius: 5px;
+  margin: 20px auto;
+  max-width: 500px;
+  padding: 10px;
+}
+
+.label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  color: #FFFFFF;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  width: 100%;
+}
+
+.hasLabel {
+  position: relative;
+  padding-top: 40px;
+}
+
+.hidden {
+  display: none;
+}
+
+#rules, #output, #results {
+  border: 2px solid #FF0000;
+}
+
+#rules p:nth-of-type(2), #rules p:nth-of-type(4) {
+  font-weight: bold;
+}
+
+#rules p {
+  margin: 10px auto;
+}
+
+/*Game log*/
+#output {
+  max-height: 140px;
+  overflow: auto;
+}
+
+.first {
+  font-style: italic;
+}
+
+.second {
+  font-weight: bold;
+}
+
+.win {
+  color: #008000;
+}
+
+.lose {
+  color: #FF0000;
+}
+/*Game log*/
+
+/*Results*/
+table, th, td {
+  border: 1px solid #FF0000;
+}
+
+table, tr {
+  border: 2px solid #FF0000;
+  border-collapse: collapse;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+th {
+  background-color: #000080;
+  width: 60%;
+}
+/*Results*/
+
+button {
+  background-color: #000000;
+  border: 2px dashed #FF0000;
+  color: #FFFFFF;
+  font-family: inherit;
+  font-size: inherit;
+  height: 49px;
+  width: 80px;
+}
+
+button:active {
+  position: relative;
+  top: 2px;
+}
+
+#rulesBtn button, #resultsBtn button {
+  border: 2px dashed #FF0000;
+}
+
+mark {
+  color: #FFFFFF;
+  background-color: #008000;
+  border-radius: 3px;
+}
