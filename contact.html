@@ -6,11 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <title>Doughboy's Donuts - Contact Us</title>
         <link rel="stylesheet" href=
-          "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+          "https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+          crossorigin="anonymous">
         <link href="styles/restaurantStyles.css" rel="stylesheet" type="text/css" />
-        <script type="text/javascript">
+        <script src="jquery.min.js"></script>
+		    <script src="jquery-ui/jquery-ui.js"></script>
 
-        </script>
         <style>
         form {
             text-align: center;
@@ -38,9 +40,6 @@
 
     <body>
 
-      <div id="successMessage">Success!</div>
-			<div id="errorMessage"></div>
-
       <header>
           <h1 class="font-italic">Doughboy's Donuts</h1>
           <h2 class="font-italic">Dallas, TX</h2>
@@ -66,7 +65,11 @@
         <div class="row">
             <div class="col-lg-12 col-md">
       <div class="right-content">
-        <form action="submit.html" method="post">
+        <form action="contact.html" method="post">
+
+          <div id="successMessage">Success!</div>
+			       <div id="errorMessage"></div>
+
           <label for="userName">Name:</label><br />
           <input type="text" class="form-control" id="userName" placeholder="Name" name="userName"><br />
           <label for="userEmail">Email:</label><br />
@@ -109,8 +112,53 @@
       </form>
         </div>
       </div>
+      </div>
       <div class="clear-float"></div>
-      </article>
+    </article>
+
+      <script type="text/javascript">
+
+      function isEmail(email) {
+			var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+			return regex.test(email);
+
+			}
+      $("#submit").click(function() {
+
+			var errorMessage = "";
+			var fieldsMissing = "";
+      if($("#userName").val() == "") {
+        fieldsMissing += "<br>Name";
+      }
+      if($("#userEmail").val() == "") {
+        fieldsMissing += "<br>Email";
+      }
+      if($("#phone").val() == "") {
+        fieldsMissing += "<br>Phone";
+      }
+      if (fieldsMissing != "") {
+
+					errorMessage += "<p>The following field(s) are missing:" + fieldsMissing;
+				}
+        if ($("#userName").val()) == false) {
+					errorMessage += "<p>Please re-enter your name</p>";
+				}
+        if (isEmail($("#userEmail").val()) == false) {
+					errorMessage += "<p>Your email address is not valid</p>";
+				}
+        if ($.isNumeric($("#phone").val()) == false) {
+					errorMessage += "<p>Your phone number is not numeric</p>";
+				}
+
+				if (errorMessage != "") {
+					$("#errorMessage").html(errorMessage);
+				} else {
+					$("#successMessage").show();
+					$("#errorMessage").hide();
+				}
+		});
+    </script>
+
 
       <footer>
         <p>300 Preston Ave, Dallas, TX, 75557</p>
@@ -119,6 +167,5 @@
       <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-      <link href="styles/restaurantSite.js" rel="stylesheet" type="text/css" />
     </body>
 </html>

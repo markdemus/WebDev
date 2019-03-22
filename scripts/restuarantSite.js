@@ -1,45 +1,17 @@
-function isEmail(email) {
-     var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-        return regex.test(email);
-
+function greetTheUser() {
+    document.getElementById("userName").innerText = document.getElementById("inputName").value;
+    document.getElementById("greeting").style.display = "block";
 }
 
-$("#text").click(function() {
-
-var errorMessage = "";
-var fieldsMissing = "";
-
-if($("#userEmail").val() == "") {
-  fieldsMissing += "<br>Email";
-}
-
-if($("#phone").val() == "") {
-  fieldsMissing += "<br>Telephone";
-}
-if($("#userName").val() == "") {
-  fieldsMissing += "<br>Name";
-}
-
-if (fieldsMissing != "") {
-
-  errorMessage += "<p>The following field(s) are missing:" + fieldsMissing;
-}
-
-if (isEmail($("#userEmail").val()) == false) {
-  errorMessage += "<p>Your email address is not valid</p>";
-}
-
-if ($.isNumeric($("#phone").val()) == false) {
-  errorMessage += "<p>Your phone number is not numeric</p>";
-}
-if (isEmail($("#userName").val()) == false) {
-  errorMessage += "<p>Your name is not valid</p>";
-}
-
-if (errorMessage != "") {
-  $("#errorMessage").submit(errorMessage);
-} else {
-  $("#successMessage").show();
-  $("#errorMessage").hide();
-}
-});
+<script type="text/javascript">
+        
+    </script>
+</head>
+<body>
+    <div>
+        Enter your name: <input type="text" id="userName" placeholder="Name" />
+        <button onclick="greetTheUser();">Show Greeting</button>
+    </div>
+    <div id="greeting" style="display:none;">
+        <h1>Hi, <span id="userName"></span>!</h1>
+    </div>
