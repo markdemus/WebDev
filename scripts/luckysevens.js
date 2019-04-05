@@ -70,8 +70,8 @@ function resetContent () {
 
 function validateInput () {
   betTest = parseInt(bet.value);
-  while (isNaN(betTest) || betTest < 10 || betTest > 50) {
-    betTest = parseInt(prompt("Place bet by entering a number from 10 to 50"));
+  while (isNaN(betTest) || betTest < 10 || betTest > 100) {
+    betTest = parseInt(prompt("Place bet by entering a number from 10 to 100"));
     }
 
   }
